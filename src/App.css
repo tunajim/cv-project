@@ -1,11 +1,23 @@
-.App {
-  text-align: center;
+/* html {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+} */
+
+.App {
+  text-align: center;
+  background-color: gray;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -15,7 +27,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;

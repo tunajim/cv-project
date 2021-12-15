@@ -1,0 +1,14 @@
+.App {
+    margin: 0;
+    padding: 0;
+}
+
+#cv-container {
+    margin: 1rem auto auto auto;
+    width: 8.5in;
+    height: 11in;
+    border: 1px solid black;
+    background-color: rgb(24, 24, 65);
+    padding: 2rem;
+}
+

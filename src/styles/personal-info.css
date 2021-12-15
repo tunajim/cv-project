@@ -1,0 +1,53 @@
+/* input {
+  font-size: 0;
+} */
+
+.name {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+/* h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+  color: rgb(173, 149, 13);
+} */
+
+.title {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: rgb(173, 149, 13);
+  border: none;
+  background: none;
+  outline: none;
+  height: 1.1rem;
+}
+
+#personal-info {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0;
+}
+
+.description {
+  font-size: .9rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  font-weight: 500;
+  color: white;
+  border: none;
+  background: none;
+  outline: none;
+  height: 1.1rem;
+}
