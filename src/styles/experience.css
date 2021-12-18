@@ -1,0 +1,29 @@
+h3 {
+    font-size: 1.5rem;
+}
+
+p, button {
+    margin-left: 1rem;
+}
+
+.experience-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.work-experience-container {
+    grid-column: 1;
+    margin-left: 2rem;
+}
+
+.skills-container {
+    grid-column: 2;
+    margin-left: 2rem;
+}
+
+.education-container {
+    grid-column: 2;
+    margin-left: 2rem;
+}

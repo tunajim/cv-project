@@ -1,0 +1,57 @@
+.contact-div {
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(18, 18, 29);
+}
+
+.contact-nav {
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 3rem;
+}
+
+.contact-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/*========================== 
+    navbar images
+ ===========================*/
+
+
+ .link {
+     font-size: .7rem;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .img {
+     width: 1rem;
+     margin-right: 1rem;
+ }
+
+ .link text {
+     margin-bottom: auto;
+ }
+
+/*========================== 
+    input styling
+ ===========================*/
+
+ .link input {
+     outline: none;
+     border: none;
+     background: none;
+     color: white;
+ }
