@@ -1,6 +1,8 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import "../styles/experience.css";
+import WorkExperienceComponent from "./sub-components/WorkExperienceComponent";
+import add from "../images/addComponent.png";
 
 class WorkExperience extends Component {
   constructor(props) {
@@ -15,18 +17,37 @@ class WorkExperience extends Component {
     this.setState({
       components: this.state.components.concat("sample component"),
     });
-  }
+  };
 
   render() {
-    return (
-      <div className="work-experience-container">
-        <h3>Work Experience</h3>
-        {this.state.components.map((elem) => (
-          <p>{elem}hello world</p>
-        ))}
-        <button onClick={this.addComponent}>Add Component</button>
-      </div>
-    );
+    return (() => {
+      if (!this.props.complete) {
+        return (
+          <div className="work-experience-container">
+            <h3 className="work-experience-header">
+              Work Experience
+              <button onClick={this.addComponent} className="add-work-button">
+                <img src={add} className="add-work-img"></img>
+              </button>
+            </h3>
+            {this.state.components.map((elem) => (
+              <WorkExperienceComponent complete={this.props.complete}/>
+            ))}
+          </div>
+        );
+      } else {
+        return (
+          <div className="work-experience-container">
+            <h3 className="work-experience-header">
+              Work Experience
+            </h3>
+            {this.state.components.map((elem) => (
+              <WorkExperienceComponent complete={this.props.complete}/>
+            ))}
+          </div>
+        );
+      }
+    })();
   }
 }
 

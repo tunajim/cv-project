@@ -34,7 +34,7 @@ class ContactLink extends Component {
     } else {
       this.setState({
         clicked: false,
-      })
+      });
     }
   };
 
@@ -42,43 +42,58 @@ class ContactLink extends Component {
     e.preventDefault();
     this.setState({
       clicked: false,
-    })
-  }
+    });
+  };
 
   render() {
     return (() => {
-      if (!this.state.clicked) {
-        return (
-          <div className="link">
-            <img
-              className="img"
-              src={this.props.img}
-              alt={this.props.type}
-            ></img>
-            <Link to="#" onDoubleClick={this._handleClick}>
-              {this.state.placeHolder}
-            </Link>
-          </div>
-        );
+      if (!this.props.complete) {
+        if (!this.state.clicked) {
+          return (
+            <div className="link" id={this.props.type}>
+              <img
+                className="img"
+                src={this.props.img}
+                alt={this.props.type}
+              ></img>
+              <Link to="#" onDoubleClick={this._handleClick}>
+                {this.state.placeHolder}
+              </Link>
+            </div>
+          );
+        } else {
+          return (
+            <div className="link">
+              <img
+                className="img"
+                src={this.props.img}
+                alt={this.props.type}
+              ></img>
+              <form onSubmit={this._handleSubmit}>
+                <input
+                  type={this.props.type}
+                  pattern={this.props.pattern}
+                  onChange={this._handleChange}
+                  onBlur={this._onBlur}
+                  defaultValue={this.props.value}
+                  autoFocus
+                  required
+                ></input>
+              </form>
+            </div>
+          );
+        }
       } else {
         return (
-          <div className="link">
+          <div className="link" id={this.props.type}>
             <img
               className="img"
               src={this.props.img}
               alt={this.props.type}
             ></img>
-            <form onSubmit={this._handleSubmit}>
-              <input
-                type={this.props.type}
-                pattern={this.props.pattern}  
-                onChange={this._handleChange}
-                onBlur={this._onBlur}
-                defaultValue={this.props.value}
-                autoFocus
-                required
-              ></input>
-            </form>
+            <Link to="#" >
+              {this.state.placeHolder}
+            </Link>
           </div>
         );
       }

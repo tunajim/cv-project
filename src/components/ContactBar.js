@@ -27,10 +27,10 @@ class ContactBar extends Component {
       <Router>
         <div className="contact-div">
           <navBar className="contact-nav">
-            <ContactLink type="email" img={email} placeHolder="janedoe@gmail.com" />
-            <ContactLink type="tel" img={phone} placeHolder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-            <ContactLink type="nav" img={nav} placeHolder="Portland, Oregon" />
-            <ContactLink type="url" img={linkedIn} placeHolder="https://linkedin.com/in/jane.doe" value="https://" />
+            <ContactLink type="email" img={email} placeHolder="janedoe@gmail.com" complete={this.props.complete}/>
+            <ContactLink type="tel" img={phone} placeHolder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"complete={this.props.complete}/>
+            <ContactLink type="nav" img={nav} placeHolder="Portland, Oregon" complete={this.props.complete}/>
+            <ContactLink type="url" img={linkedIn} placeHolder="https://linkedin.com/in/jane.doe" value="https://" complete={this.props.complete}/>
           </navBar>
         </div>
       </Router>

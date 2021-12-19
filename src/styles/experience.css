@@ -1,29 +1,119 @@
 h3 {
-    font-size: 1.5rem;
+  /* font-size: 1.5rem;
+  margin-bottom: .25rem;
+  margin-top: .3rem; */
+  margin-left: .5rem;
 }
 
-p, button {
-    margin-left: 1rem;
+p,
+button {
+  margin-left: 1rem;
 }
 
 .experience-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  row-gap: 0;
+  gap: 0;
 }
 
 .work-experience-container {
-    grid-column: 1;
-    margin-left: 2rem;
+  grid-column: 1;
+  margin-left: 2rem;
+  margin-top: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.work-experience-component-container {
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: start;
+  column-gap: 0;
+  gap: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: .25rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  margin: .25rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+  margin: .25rem;
+}
+
+p {
+  font-size: .65rem;
+  margin: .25rem;
 }
 
 .skills-container {
-    grid-column: 2;
-    margin-left: 2rem;
+  grid-column: 2;
+  margin-left: 2rem;
 }
 
 .education-container {
-    grid-column: 2;
-    margin-left: 2rem;
+  grid-column: 2;
+  margin-left: 2rem;
+}
+
+/* =========================================
+ buttons
+============================================*/
+
+.add-work-img {
+  background: none;
+  background-color: none;
+  border: none;
+  width: 1.5rem;
+}
+
+.add-work-button {
+
+  align-content: center;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.work-experience-header {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+ul {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  font-size: .65rem;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.remove-button {
+  width: 1rem;
+  position: absolute;
+  transform: translate(-150%, 10%);
+}
+
+.submit-cv {
+  margin-left: 2rem;
 }

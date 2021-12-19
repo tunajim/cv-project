@@ -7,24 +7,46 @@ import ContactBar from "./components/ContactBar";
 import WorkExperience from "./components/WorkExperience";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import { render } from "@testing-library/react";
+import SubmitButton from "./components/SubmitButton";
 
 class App extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      complete: false,
+    };
   }
 
+  _completeCV = () => {
+    this.setState({
+      complete: true,
+    });
+  };
+
+  _editCV = () => {
+    this.setState({
+      complete: false,
+    });
+  };
   render() {
     return (
       <div className="App">
         <Header />
         <div id="cv-container">
-          <PersonalInfo />
-          <ContactBar />
+          <PersonalInfo complete={this.state.complete} />
+          <ContactBar complete={this.state.complete}/>
           <div className="experience-container">
-            <WorkExperience />
-            <Skills />
-            <Education />
+            <WorkExperience complete={this.state.complete} />
+            <Skills complete={this.state.complete} />
+            <Education complete={this.state.complete} />
           </div>
+          {!this.state.complete ? (
+            <SubmitButton clicked={this._completeCV} type="Complete" />
+          ) : (
+            <SubmitButton clicked={this._editCV} type="Edit" />
+          )}
         </div>
       </div>
     );

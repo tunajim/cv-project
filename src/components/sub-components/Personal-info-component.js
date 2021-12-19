@@ -22,52 +22,62 @@ class PersonalInfoComponent extends Component {
   };
 
   handleChange = (e) => {
-      this.setState({
-          placeHolder: e.target.value,
-      })
-  }
+    this.setState({
+      placeHolder: e.target.value,
+    });
+  };
 
   handleSubmit = (e) => {
-      e.preventDefault();
-      if(this.state.placeHolder === ""){
-          this.setState({
-              placeHolder: "Must make valid entry",
-          })
-      }
+    e.preventDefault();
+    if (this.state.placeHolder === "") {
       this.setState({
-          clicked: false,
-      })
-  }
+        placeHolder: "Must make valid entry",
+      });
+    }
+    this.setState({
+      clicked: false,
+    });
+  };
 
   handleBlur = (e) => {
     this.setState({
-        clicked: false,
-    })    
-  }
+      clicked: false,
+    });
+  };
   render() {
     const holder = this.state.placeHolder;
     const className = this.props.type;
     return (() => {
-      if (!this.state.clicked) {
+      if (!this.props.complete) {
+        if (!this.state.clicked) {
+          return (
+            <this.props.elemType
+              onDoubleClick={this.handleClick}
+              className={className}
+            >
+              {holder}
+            </this.props.elemType>
+          );
+        } else {
+          return (
+            <form className={className} onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                className={className}
+                onChange={this.handleChange}
+                autoFocus
+                onBlur={this.handleBlur}
+              ></input>
+            </form>
+          );
+        }
+      } else {
         return (
           <this.props.elemType
-            onDoubleClick={this.handleClick}
             className={className}
           >
             {holder}
           </this.props.elemType>
-        );
-      } else {
-        return (
-          <form className={className} onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              className={className}
-              onChange={this.handleChange}
-              autoFocus
-              onBlur={this.handleBlur}
-            ></input>
-          </form>
         );
       }
     })();
