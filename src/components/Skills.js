@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "../styles/experience.css";
+import add from "../images/addComponent.png";
+import SkillsComponent from "./sub-components/SkillsComponent";
+import AddComponentButton from "./addComponentButton";
 
 class Skills extends Component {
   constructor(props) {
@@ -19,11 +22,20 @@ class Skills extends Component {
   render() {
     return (
       <div className="skills-container">
-        <h3>Skills</h3>
-        {this.state.components.map((elem) => (
-          <p>hello world</p>
-        ))}
-        <button onClick={this._addComponent}>Add Component</button>
+        <h3 className="skill-header">
+          Skills
+          {!this.props.complete ? (
+            <AddComponentButton
+              click={this._addComponent}
+              class="add-component-button"
+            />
+          ) : null}
+        </h3>
+        <div className="skills-component-container">
+          {this.state.components.map((elem) => (
+            <SkillsComponent complete={this.props.complete} />
+          ))}
+        </div>
       </div>
     );
   }

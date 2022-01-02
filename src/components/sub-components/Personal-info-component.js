@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../styles/personal-info.css";
 
 class PersonalInfoComponent extends Component {
   constructor(props) {
@@ -73,9 +74,7 @@ class PersonalInfoComponent extends Component {
         }
       } else {
         return (
-          <this.props.elemType
-            className={className}
-          >
+          <this.props.elemType className={className}>
             {holder}
           </this.props.elemType>
         );

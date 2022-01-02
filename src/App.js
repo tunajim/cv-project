@@ -31,16 +31,21 @@ class App extends Component {
     });
   };
   render() {
+    console.log(this.state.complete);
     return (
       <div className="App">
         <Header />
         <div id="cv-container">
           <PersonalInfo complete={this.state.complete} />
-          <ContactBar complete={this.state.complete}/>
+          <ContactBar complete={this.state.complete} />
           <div className="experience-container">
-            <WorkExperience complete={this.state.complete} />
-            <Skills complete={this.state.complete} />
-            <Education complete={this.state.complete} />
+            <div className="left-container">
+              <WorkExperience complete={this.state.complete} />
+            </div>
+            <div className="right-container">
+              <Skills complete={this.state.complete} />
+              <Education complete={this.state.complete} />
+            </div>
           </div>
           {!this.state.complete ? (
             <SubmitButton clicked={this._completeCV} type="Complete" />

@@ -1,10 +1,3 @@
-h3 {
-  /* font-size: 1.5rem;
-  margin-bottom: .25rem;
-  margin-top: .3rem; */
-  margin-left: .5rem;
-}
-
 p,
 button {
   margin-left: 1rem;
@@ -12,19 +5,17 @@ button {
 
 .experience-container {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   color: white;
-  row-gap: 0;
   gap: 0;
 }
 
 .work-experience-container {
   grid-column: 1;
+  grid-row: 1 / 3;
   margin-left: 2rem;
   margin-top: 0;
-  column-gap: 0;
-  row-gap: 0;
 }
 
 .work-experience-component-container {
@@ -35,33 +26,33 @@ button {
   flex-direction: column;
   align-items: start;
   align-content: start;
-  column-gap: 0;
   gap: 0;
 }
 
 h4 {
   font-size: 1rem;
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 h5 {
   font-size: 0.8rem;
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 h6 {
   font-size: 0.7rem;
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 p {
-  font-size: .65rem;
-  margin: .25rem;
+  font-size: 0.65rem;
+  margin: 0.25rem;
 }
 
 .skills-container {
   grid-column: 2;
   margin-left: 2rem;
+  height: fit-content;
 }
 
 .education-container {
@@ -73,34 +64,35 @@ p {
  buttons
 ============================================*/
 
-.add-work-img {
+.add-img {
   background: none;
   background-color: none;
   border: none;
   width: 1.5rem;
 }
 
-.add-work-button {
-
+.add-component-button {
   align-content: center;
   background: none;
   outline: none;
   border: none;
 }
 
-.work-experience-header {
+.work-experience-header,
+h3,
+.skill-header {
   display: flex;
   justify-content: start;
   align-content: center;
   margin: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 ul {
   margin: 0;
   margin-left: 1rem;
   padding: 0;
-  font-size: .65rem;
+  font-size: 0.65rem;
 }
 
 li {
@@ -110,10 +102,96 @@ li {
 
 .remove-button {
   width: 1rem;
+  margin: 0;
+  padding: 0;
   position: absolute;
   transform: translate(-150%, 10%);
 }
 
 .submit-cv {
   margin-left: 2rem;
+}
+
+/* =========================================
+  lists
+============================================*/
+
+.input {
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 0.65rem;
+}
+
+.list {
+  font-size: 0.65rem;
+}
+
+/* ==========================================
+  skills
+============================================*/
+
+.skill-tag {
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+  align-items: center;
+  font-size: 0.75rem;
+  grid-row: 1 / 2;
+}
+
+.skills-component-container {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.remove-skill-button {
+  width: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 50px;
+  color: white;
+}
+
+/* ==========================================
+  ` education 
+============================================*/
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2;
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+}
+
+.education-header {
+  display: flex;
+}
+
+.education-component-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.education-component {
+  display: flex;
+  flex-direction: column;
 }

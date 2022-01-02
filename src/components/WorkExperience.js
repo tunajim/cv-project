@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "../styles/experience.css";
 import WorkExperienceComponent from "./sub-components/WorkExperienceComponent";
 import add from "../images/addComponent.png";
+import AddComponentButton from "./addComponentButton";
 
 class WorkExperience extends Component {
   constructor(props) {
@@ -20,34 +21,23 @@ class WorkExperience extends Component {
   };
 
   render() {
-    return (() => {
-      if (!this.props.complete) {
-        return (
-          <div className="work-experience-container">
-            <h3 className="work-experience-header">
-              Work Experience
-              <button onClick={this.addComponent} className="add-work-button">
-                <img src={add} className="add-work-img"></img>
-              </button>
-            </h3>
-            {this.state.components.map((elem) => (
-              <WorkExperienceComponent complete={this.props.complete}/>
-            ))}
-          </div>
-        );
-      } else {
-        return (
-          <div className="work-experience-container">
-            <h3 className="work-experience-header">
-              Work Experience
-            </h3>
-            {this.state.components.map((elem) => (
-              <WorkExperienceComponent complete={this.props.complete}/>
-            ))}
-          </div>
-        );
-      }
-    })();
+    console.log(this.props.complete);
+    return (
+      <div className="work-experience-container">
+        <h3 className="work-experience-header">
+          Work Experience
+          {!this.props.complete ? (
+            <AddComponentButton
+              click={this.addComponent}
+              class="add-component-button"
+            />
+          ) : null}
+        </h3>
+        {this.state.components.map((elem) => (
+          <WorkExperienceComponent complete={this.props.complete} />
+        ))}
+      </div>
+    );
   }
 }
 
