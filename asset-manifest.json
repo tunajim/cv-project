@@ -1,24 +1,17 @@
 {
-  "files": {
-    "main.css": "/cv-project/static/css/main.d5f619ce.chunk.css",
-    "main.js": "/cv-project/static/js/main.f9ce5bf7.chunk.js",
-    "main.js.map": "/cv-project/static/js/main.f9ce5bf7.chunk.js.map",
-    "runtime-main.js": "/cv-project/static/js/runtime-main.d7a0cf73.js",
-    "runtime-main.js.map": "/cv-project/static/js/runtime-main.d7a0cf73.js.map",
-    "static/js/2.2e7e6c38.chunk.js": "/cv-project/static/js/2.2e7e6c38.chunk.js",
-    "static/js/2.2e7e6c38.chunk.js.map": "/cv-project/static/js/2.2e7e6c38.chunk.js.map",
-    "index.html": "/cv-project/index.html",
-    "static/css/main.d5f619ce.chunk.css.map": "/cv-project/static/css/main.d5f619ce.chunk.css.map",
-    "static/js/2.2e7e6c38.chunk.js.LICENSE.txt": "/cv-project/static/js/2.2e7e6c38.chunk.js.LICENSE.txt",
-    "static/media/addComponent.4f2c7a89.png": "/cv-project/static/media/addComponent.4f2c7a89.png",
-    "static/media/email.a322baaa.png": "/cv-project/static/media/email.a322baaa.png",
-    "static/media/linkedin.f249b382.png": "/cv-project/static/media/linkedin.f249b382.png",
-    "static/media/navigation.eba38f85.png": "/cv-project/static/media/navigation.eba38f85.png"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.d7a0cf73.js",
-    "static/js/2.2e7e6c38.chunk.js",
-    "static/css/main.d5f619ce.chunk.css",
-    "static/js/main.f9ce5bf7.chunk.js"
-  ]
+  "main.css": "/cv-project/static/css/main.316d1a7a.chunk.css",
+  "main.js": "/cv-project/static/js/main.3ccbd25b.chunk.js",
+  "main.js.map": "/cv-project/static/js/main.3ccbd25b.chunk.js.map",
+  "static/js/1.09d73b64.chunk.js": "/cv-project/static/js/1.09d73b64.chunk.js",
+  "static/js/1.09d73b64.chunk.js.map": "/cv-project/static/js/1.09d73b64.chunk.js.map",
+  "runtime~main.js": "/cv-project/static/js/runtime~main.191a181b.js",
+  "runtime~main.js.map": "/cv-project/static/js/runtime~main.191a181b.js.map",
+  "static/media/addComponent.png": "/cv-project/static/media/addComponent.48eae2a6.png",
+  "static/media/email.png": "/cv-project/static/media/email.41bf034f.png",
+  "static/media/navigation.png": "/cv-project/static/media/navigation.8a5683e5.png",
+  "static/media/linkedin.png": "/cv-project/static/media/linkedin.d492efc7.png",
+  "static/css/main.316d1a7a.chunk.css.map": "/cv-project/static/css/main.316d1a7a.chunk.css.map",
+  "index.html": "/cv-project/index.html",
+  "precache-manifest.4500f70baba939f608b86dc50e03a318.js": "/cv-project/precache-manifest.4500f70baba939f608b86dc50e03a318.js",
+  "service-worker.js": "/cv-project/service-worker.js"
 }
